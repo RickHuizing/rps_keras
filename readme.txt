@@ -7,3 +7,7 @@ setup using pycharm with python 3.7
  - create new pycharm project with 3.6.7 interpreter and virtualmachine enabled
  - pip install tensorflow, Pillow, cv2, tkinter, keras, pandas
     - run those in the pycharm terminal to work for the virtual environment
+
+running instructions:
+    - run camera_keras
+    - select desired model by typing the right index and press enter

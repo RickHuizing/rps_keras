@@ -25,7 +25,6 @@ def keypress(key):
     if key.char == ' ':
         k = 1
 
-
 root.bind('<Escape>', lambda e: root.quit())
 root.bind("<KeyPress>", keypress)
 
@@ -56,8 +55,8 @@ def remove_black_boxes(img):
 def preprocess(img):
     img, img1, img2 = split_and_resize(img)
     img1 = remove_black_boxes(img1)
-    img2 = remove_black_boxes(img2)
     img2 = img2.transpose(PIL.Image.FLIP_LEFT_RIGHT)
+    img2 = remove_black_boxes(img2)
 
     img1 = np.asarray(img1.getdata(), dtype=np.int).reshape((img1.size[1], img1.size[0]))
     img2 = np.asarray(img2.getdata(), dtype=np.int).reshape((img2.size[1], img2.size[0]))

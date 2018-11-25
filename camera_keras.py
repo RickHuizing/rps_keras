@@ -25,6 +25,7 @@ def keypress(key):
     if key.char == ' ':
         k = 1
 
+
 root.bind('<Escape>', lambda e: root.quit())
 root.bind("<KeyPress>", keypress)
 
@@ -79,7 +80,7 @@ def process(img):
     values = np.array([img_left, img_right])
     values = values.reshape([values.shape[0], values.shape[1], values.shape[2], 1])
     print(values.shape)
-    print(get_prediction(values))
+    return get_prediction(values)
 
 
 # show a new frame: take webcam snapshot and write it to the gui
